@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa'
+import { ExternalLinkIcon, ArrowRightIcon } from '@/components/icons'
 import { AthleticCard } from '@/components/ui/athletic-card'
 import type { Locale } from '@/lib/i18n'
 import type { TranslationKey } from '@/lib/translations'
@@ -207,7 +207,7 @@ export default function Projects({ t }: Props) {
                           whileTap={{ scale: 0.95 }}
                         >
                           <span>{t.projects.viewProject}</span>
-                          <FaExternalLinkAlt />
+                          <ExternalLinkIcon />
                         </motion.a>
                       </motion.div>
                     )}
@@ -215,7 +215,7 @@ export default function Projects({ t }: Props) {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h4 className="text-lg font-display font-bold text-athletic-dark mb-2 group-hover:text-ocean-700 transition-colors">
+                    <h3 className="text-lg font-display font-bold text-athletic-dark mb-2 group-hover:text-ocean-700 transition-colors">
                       {project.link ? (
                         <a 
                           href={project.link}
@@ -228,7 +228,7 @@ export default function Projects({ t }: Props) {
                       ) : (
                         project.title
                       )}
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-600 leading-relaxed mb-3">
                       {renderProjectDescription(project)}
                     </p>
@@ -243,7 +243,7 @@ export default function Projects({ t }: Props) {
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         <span>{t.projects.view}</span>
-                        <FaArrowRight className="ml-1 text-xs group-hover/link:translate-x-1 transition-transform" />
+                        <ArrowRightIcon className="ml-1 text-xs group-hover/link:translate-x-1 transition-transform" />
                       </motion.a>
                     )}
                   </div>
