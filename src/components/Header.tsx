@@ -82,7 +82,11 @@ export default function Header({ locale, t }: Props) {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setIsMenuOpen(false)
+      return
     }
+    // Fallback: navigate to the homepage anchor if section is not on this page
+    const homeAnchor = `/${locale}/#${sectionId}`
+    window.location.assign(homeAnchor)
   }
 
   const otherLocale = locale === 'en' ? 'nl' : 'en'
