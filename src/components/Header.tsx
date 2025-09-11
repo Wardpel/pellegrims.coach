@@ -5,21 +5,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { TwitterIcon, FacebookIcon, InstagramIcon, LinkedinIcon, EnvelopeIcon, BarsIcon, TimesIcon, GlobeIcon } from '@/components/icons'
+import { EnvelopeIcon, BarsIcon, TimesIcon, GlobeIcon } from '@/components/icons'
 import { GlassHeader } from '@/components/ui/glass-header'
+import { socialLinks } from '@/lib/constants'
 import type { Locale } from '@/lib/i18n'
 import type { TranslationKey } from '@/lib/translations'
 
-// Social media links configuration
-const socialLinks = [
-  { href: "https://twitter.com/WardPel", icon: TwitterIcon, platform: "Twitter" },
-  { href: "https://www.facebook.com/ward.pellegrims/", icon: FacebookIcon, platform: "Facebook" },
-  { href: "https://www.instagram.com/wardpel/", icon: InstagramIcon, platform: "Instagram" },
-  { href: "https://www.linkedin.com/in/pellegrimsward/", icon: LinkedinIcon, platform: "LinkedIn" }
-] as const
-
-// Reusable social link component
-const SocialLink = ({
+export const SocialLink = ({
   href,
   icon: Icon,
   platform,
@@ -119,15 +111,18 @@ export default function Header({ locale, t }: Props) {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="h-12 w-auto">
-                <Image
-                  src="/images/WPC_Logo_Horizontal_FullColour.png"
-                  alt="Ward Pellegrims Coaching"
-                  width={240}
-                  height={96}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
+              <Link href={homePath} aria-label="Ward Pellegrims Coaching homepage">
+                <div className="h-12 w-auto">
+                  <Image
+                    src="/images/WPC_Logo_Horizontal_FullColour.png"
+                    alt="Ward Pellegrims Coaching"
+                    width={240}
+                    height={96}
+                    className="h-full w-auto object-contain"
+                    priority
+                  />
+                </div>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}

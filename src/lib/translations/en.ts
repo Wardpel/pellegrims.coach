@@ -121,7 +121,13 @@ export const en = {
   
   // Footer section
   footer: {
-    copyright: "© Ward Pellegrims. All rights reserved."
+    copyright: "© Ward Pellegrims. All rights reserved.",
+    companyName: "Ward Pellegrims",
+    address: "Luiaardweg 21, 1850 Grimbergen",
+    vatNumber: "VAT: BE0777482318",
+    legalForm: "Limited Partnership",
+    navigationTitle: "Navigation",
+    followUs: "Follow Us"
   },
   
   // Contact section
@@ -147,5 +153,58 @@ export const en = {
     successMsg: "I'll get back to you as soon as possible.",
     sendAnother: "Send another message",
     error: "An error occurred while trying to send your message, please try again."
+  }
+  ,
+  // Swim Winter 2025-2026 landing page
+  swimWinter: {
+    meta: {
+      title: 'Group swim training Winter 2025 - 2026',
+      description: 'Swim group training in the Topsportbad Wezenberg (Antwerp). Beginners (technique) and advanced (speed & intensity). Limited places – register quickly.',
+    },
+    heroTitle: 'Group swim training\nWinter 2025 - 2026',
+    heroIntro: 'Perfect your freestyle for triathlon and swim faster and more efficiently under guidance of Ward Pellegrims',
+    locationIntro: 'Location:',
+    groupsTitle: 'Our Training Groups',
+    begTitle: 'Beginners Group: Focus on Technique',
+    begTime: '13:00 - 14:00',
+    begDesc: 'Are you new to the world of triathlon or feel that your swimming technique could use a solid upgrade? Then this group is for you. We start from the basics and build your technique step by step. I dedicate maximum attention to:',
+    begBullets: ['Efficient freestyle technique: The right position in the water, minimizing drag and optimizing propulsion.', 'Breathing: Learn to breathe relaxed and effectively, so you save energy for the rest of the race.', 'Water feel: Gain more control and confidence in the water.'],
+    motivationalText: 'In this group, speed is secondary to perfect execution. A strong technical foundation is the key to sustainable success.',
+    advTitle: 'Advanced Group: Training on Speed and Intensity',
+    advTime: '14:00 - 15:00',
+    advDesc: 'Have you mastered the basic technique and want to take your performance to the next level? Then join our advanced group. Here the focus is on:',
+    advBullets: ['Specific training sets: Interval training and endurance sets to increase your speed and stamina.', 'Pace and race simulation: Learn to distribute your energy correctly and train at race pace.', 'Technique refinement under pressure: Maintain your efficiency, even when fatigue sets in.'],
+    advMotivationalText: 'This group is ideal for the athlete who is ready to break their personal records.',
+    practicalTitle: 'Practical Information',
+    coach: 'Coach:',
+    day: 'Day:',
+    price: 'Price:',
+    gear: 'Required gear:',
+    invoice: 'Invoicing:',
+    dayValue: 'Every Friday afternoon',
+    priceValue: '€315 (incl. VAT) for 15 sessions',
+    gearValue: 'Goggles, fins, hand paddles, pull buoy, snorkel',
+    invoiceValue: 'Invoice available on request',
+    datesTitle: 'Training Dates',
+    months: [
+      { id: 'nov-2025', title: 'November 2025', days: ['7','14','21','28'] },
+      { id: 'dec-2025', title: 'December 2025', days: ['5','12','19'] },
+      { id: 'jan-2026', title: 'January 2026', days: ['9','16','23','30'] },
+      { id: 'feb-2026', title: 'February 2026', days: ['6','13','20','27'] },
+    ],
+    enrollTitle: 'Enroll',
+    questions: 'Questions about your registration, invoicing or something else? ',
+    contactForm: 'Contact us via the contact form',
+    payment: {
+      title: 'Confirm & pay instantly',
+      intro: 'Secure your spot right away with the registration button for your group.',
+      note: '', // This is now combined in 'questions' and 'contactForm'
+      beginners: 'Beginners – technique',
+      beginnersTime: '13:00 - 14:00',
+      beginnersCta: 'Register',
+      advanced: 'Advanced – speed & intensity',
+      advancedTime: '14:00 - 15:00',
+      advancedCta: 'Register'
+    }
   }
 } as const
