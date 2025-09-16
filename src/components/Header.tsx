@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TwitterIcon, FacebookIcon, InstagramIcon, LinkedinIcon, EnvelopeIcon, BarsIcon, TimesIcon, GlobeIcon } from '@/components/icons'
@@ -74,6 +75,7 @@ type Props = {
 export default function Header({ locale, t }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -84,7 +86,8 @@ export default function Header({ locale, t }: Props) {
   }
 
   const otherLocale = locale === 'en' ? 'nl' : 'en'
-  const otherLocalePath = locale === 'en' ? '/nl/' : '/en/'
+  const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`)
+  const homePath = `/${locale}/`
 
   const handleLanguageSwitch = () => {
     // Mark that user has manually chosen a language
