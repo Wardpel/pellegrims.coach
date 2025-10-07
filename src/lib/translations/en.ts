@@ -7,18 +7,18 @@ export const en = {
     description: "Elite level coaching in swimming and triathlon. Swimming & Triathlon Coach providing online training programs, technique analysis, and coaching services.",
     keywords: "swimming coach, triathlon coach, swimming training, triathlon training, Belgium, Ward Pellegrims"
   },
-  
+
   // Navigation
   nav: {
     about: "About",
-    coaching: "Coaching", 
+    coaching: "Coaching",
     projects: "Projects",
     contact: "Contact"
   },
-  
+
   // Profile
   profile: "Swimming & Triathlon Coach",
-  
+
   // About section
   about: {
     title: "Ward Pellegrims",
@@ -34,7 +34,7 @@ export const en = {
     yearsExperience: "Years Experience",
     clientsCoached: "Clients Coached"
   },
-  
+
   // Coaching section
   coaching: {
     title: "Coaching",
@@ -70,7 +70,7 @@ export const en = {
       camps: "Camps"
     }
   },
-  
+
   // Projects section
   projects: {
     items: {
@@ -118,7 +118,7 @@ export const en = {
       camps: "Camps"
     }
   },
-  
+
   // Footer section
   footer: {
     copyright: "© Ward Pellegrims. All rights reserved.",
@@ -129,7 +129,9 @@ export const en = {
     navigationTitle: "Navigation",
     followUs: "Follow Us",
     legal: "General Terms & Conditions",
-    legalSlug: "general-terms"
+    legalSlug: "general-terms",
+    privacy: "Privacy Policy",
+    privacySlug: "privacy-policy"
   },
 
   // General terms page
@@ -225,7 +227,7 @@ export const en = {
         title: '10. Personal Data',
         paragraphs: [
           'We process personal data in line with the EU General Data Protection Regulation (GDPR) and our Privacy Notice. Data provided for bookings or coaching is used only for client management, service delivery and statutory obligations.',
-          'You may request access, correction or deletion of your data via info@pellegrims.coach. Complaints can be lodged with the Belgian Data Protection Authority (www.gegevensbeschermingsautoriteit.be).' 
+          'You may request access, correction or deletion of your data via info@pellegrims.coach. Complaints can be lodged with the Belgian Data Protection Authority (www.gegevensbeschermingsautoriteit.be).'
         ]
       },
       {
@@ -277,7 +279,124 @@ export const en = {
       complaintNote: 'If you are not satisfied with our response, you can contact the Belgian Consumer Ombudsman Service (www.consumerombudsman.be) or submit a complaint via the European ODR platform (https://ec.europa.eu/odr).'
     }
   },
-  
+
+    // Privacy policy page
+    privacyPolicy: {
+        meta: {
+            title: "Privacy Policy | Ward Pellegrims",
+            description: "Learn how Ward Pellegrims processes personal data collected through the website, contact form, and Stripe payments in accordance with GDPR.",
+        },
+        title: "Privacy Policy",
+        lastUpdated: "Last updated: 7 October 2025",
+        intro: "We respect your privacy and process personal data in line with the General Data Protection Regulation (GDPR) and Belgian data protection laws. This privacy policy explains which personal data we collect, why we collect it, how we use it and the rights you have.",
+        controller: {
+            title: "Data Controller",
+            paragraphs: [
+                "Ward Pellegrims CV, Luiaardweg 21, 1850 Grimbergen, Belgium (part of Ward Pellegrims, limited partnership, VAT BE0777.482.318), is responsible for the processing of personal data on this website.",
+                "You can contact us about privacy matters via the contact form on this website or by emailing privacy@pellegrims.coach."
+            ]
+        },
+        dataWeCollect: {
+            title: "Personal Data We Collect",
+            intro: "We only collect data that is necessary for delivering our services and communicating with you.",
+            items: [
+                {
+                    title: "Contact form submissions",
+                    description: "When you send us a message we collect your name, email address, subject and the content of your message. If Google reCAPTCHA is enabled to prevent abuse, Google may collect device and usage data as set out in its own privacy notice."
+                },
+                {
+                    title: "Course registrations and payments",
+                    description: "If you book a training session or pay online, Stripe Payments Europe, Limited processes your payment details securely on our behalf. We receive confirmation data such as your name, email address, purchased product, payment status and invoice details. We never store your full payment card information."
+                },
+                {
+                    title: "Technical data",
+                    description: "Our hosting provider (Vercel) automatically stores limited log data when you visit our website, including IP address, browser type and basic device information. This data is used to ensure the security and reliability of the website."
+                },
+                {
+                    title: "Cookies and website analytics",
+                    description: "Our website uses strictly necessary technical cookies to ensure basic functionality. We do not currently use analytics or marketing cookies. Should this change in the future, this privacy policy will be updated and your consent will be requested where required."
+                }
+            ]
+        },
+        howWeUseData: {
+            title: "How We Use Your Data",
+            paragraphs: [
+                "Responding to enquiries and providing coaching information.",
+                "Managing registrations, confirmations and payments for courses and coaching services.",
+                "Maintaining the security and availability of our website and preventing fraud or abuse.",
+                "Complying with legal obligations, such as accounting and tax requirements.",
+                "With your prior consent: sending newsletters and marketing communications about our services, training sessions and events."
+            ]
+        },
+        legalBases: {
+            title: "Legal Bases for Processing",
+            items: [
+                "Performance of a contract or taking steps at your request before entering into a contract (for enquiries, bookings and payments).",
+                "Legal obligations under Belgian law (for example retention of invoices and accounting records).",
+                "Legitimate interest in running a secure and reliable website and protecting our services against misuse.",
+                "Consent when required, such as when you voluntarily provide information via the contact form."
+            ]
+        },
+        thirdParties: {
+            title: "Sharing Your Data",
+            intro: "We only share personal data with trusted third parties when necessary for the purposes described above.",
+            items: [
+                "EmailJS PTE. LTD. (Singapore) delivers contact form messages to our email inbox. EmailJS acts as our processor and stores the content of the submissions so that we can respond to you.",
+                "Stripe Payments Europe, Limited (Ireland) processes payments securely and may transfer data to Stripe, Inc. in the United States under approved safeguards.",
+                "Vercel Inc. (United States) hosts our website and stores server logs in the EU and US for security and performance purposes.",
+                "Professional advisers or authorities when this is required to comply with legal obligations, enforce agreements or defend legal claims."
+            ]
+        },
+        retention: {
+            title: "Data Retention",
+            paragraphs: [
+                "Contact form messages are kept for up to 24 months after the last interaction, unless a longer retention period is required for ongoing support or disputes.",
+                "Transactional data (including invoices and payment confirmations) is retained for 7 full financial years to meet Belgian accounting and tax obligations.",
+                "Technical logs maintained by our hosting provider are typically retained for 30 days, unless a longer period is needed to investigate security incidents."
+            ]
+        },
+        security: {
+            title: "Data Security",
+            paragraphs: [
+                "We implement technical and organisational measures to protect your personal data, including HTTPS encryption, role-based access controls and contractual safeguards with our service providers.",
+                "Despite our efforts, no online system can be completely secure. We encourage you to notify us immediately if you suspect any misuse of your data."
+            ]
+        },
+        rights: {
+            title: "Your Rights",
+            intro: "You have the following rights under GDPR. You can exercise them at any time by contacting us using the details above.",
+            list: [
+                "Access to the personal data we hold about you.",
+                "Rectification of inaccurate or incomplete data.",
+                "Erasure of your data when there is no longer a legal basis for processing.",
+                "Restriction of processing in specific circumstances.",
+                "Data portability for information you have provided to us (right to data portability).",
+                "Object to processing based on legitimate interests.",
+                "Withdraw consent where processing relies on your consent.",
+                "Lodge a complaint with the Data Protection Authority if you believe we are not processing your personal data correctly."
+            ]
+        },
+        internationalTransfers: {
+            title: "International Transfers",
+            paragraphs: [
+                "Some of our service providers operate outside the European Economic Area. When personal data is transferred internationally we rely on appropriate safeguards, such as the EU-US Data Privacy Framework or European Commission Standard Contractual Clauses, to protect your data."
+            ]
+        },
+        complaints: {
+            title: "Questions or Complaints",
+            paragraphs: [
+                "If you have concerns about how we process your personal data, please contact us first so we can address the issue.",
+                "You also have the right to lodge a complaint with the Belgian Data Protection Authority (Autorité de protection des données / Gegevensbeschermingsautoriteit), Drukpersstraat 35, 1000 Brussels, www.gegevensbeschermingsautoriteit.be."
+            ]
+        },
+        updates: {
+            title: "Changes to This Policy",
+            paragraphs: [
+                "We may update this privacy policy from time to time to reflect changes in our processing activities or legal requirements. The updated version will be published on this page with a new revision date."
+            ]
+        }
+    },
+
   // Contact section
   contact: {
     title: "Contact Me",
@@ -292,7 +411,7 @@ export const en = {
     form: {
       name: "Name",
       email: "Email",
-      subject: "Subject", 
+      subject: "Subject",
       message: "Message",
       send: "Send Message",
       sending: "Sending..."

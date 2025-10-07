@@ -129,7 +129,9 @@ export const nl = {
     navigationTitle: "Navigatie",
     followUs: "Volg Ons",
     legal: "Algemene Voorwaarden",
-    legalSlug: "algemene-voorwaarden"
+    legalSlug: "algemene-voorwaarden",
+    privacy: "Privacyverklaring",
+    privacySlug: "privacybeleid"
   },
 
   // Pagina algemene voorwaarden
@@ -277,6 +279,123 @@ export const nl = {
       complaintNote: 'Ben je niet tevreden met onze reactie, dan kan je terecht bij de Consumentenombudsdienst (www.consumentenombudsdienst.be) of een klacht indienen via het Europees ODR-platform (https://ec.europa.eu/odr).'
     }
   },
+
+    // Privacybeleidpagina
+    privacyPolicy: {
+        meta: {
+            title: "Privacyverklaring | Ward Pellegrims",
+            description: "Ontdek hoe Ward Pellegrims persoonsgegevens verwerkt die via de website, het contactformulier en Stripe-betalingen worden verzameld, volledig in lijn met de GDPR.",
+        },
+        title: "Privacyverklaring",
+        lastUpdated: "Laatst bijgewerkt: 7 oktober 2025",
+        intro: "Wij respecteren uw privacy en verwerken persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR) en de Belgische privacywetgeving. In deze privacyverklaring leggen we uit welke gegevens we verzamelen, waarom we dit doen, hoe we ze gebruiken en welke rechten u heeft.",
+        controller: {
+            title: "Verantwoordelijke voor de verwerking",
+            paragraphs: [
+                "Ward Pellegrims CV, Luiaardweg 21, 1850 Grimbergen, België (onderdeel van Ward Pellegrims, commanditaire vennootschap, BTW BE0777.482.318), is verantwoordelijk voor de verwerking van persoonsgegevens op deze website.",
+                "Voor privacyvragen kan u ons bereiken via het contactformulier op deze website of per e-mail op privacy@pellegrims.coach."
+            ]
+        },
+        dataWeCollect: {
+            title: "Welke persoonsgegevens we verzamelen",
+            intro: "We verzamelen enkel de gegevens die nodig zijn om onze diensten te leveren en met u te communiceren.",
+            items: [
+                {
+                    title: "Inzendingen via het contactformulier",
+                    description: "Wanneer u ons een bericht stuurt verzamelen we uw naam, e-mailadres, onderwerp en de inhoud van uw bericht. Wanneer Google reCAPTCHA is ingeschakeld om misbruik te voorkomen, kan Google apparaat- en gebruiksgegevens verzamelen zoals beschreven in hun eigen privacyverklaring."
+                },
+                {
+                    title: "Inschrijvingen en betalingen",
+                    description: "Wanneer u zich inschrijft voor een training of online betaalt, verwerkt Stripe Payments Europe, Limited uw betaalgegevens veilig in onze naam. Wij ontvangen bevestigingsgegevens zoals uw naam, e-mailadres, aangekochte product, betalingsstatus en facturatiegegevens. Wij bewaren nooit uw volledige betaalkaartgegevens."
+                },
+                {
+                    title: "Technische gegevens",
+                    description: "Onze hostingprovider (Vercel) slaat automatisch beperkte loggegevens op wanneer u onze website bezoekt, waaronder IP-adres, browsertype en basisinformatie over uw toestel. Deze gegevens worden gebruikt om de veiligheid en betrouwbaarheid van de website te waarborgen."
+                },
+                {
+                    title: "Cookies en website-analyse",
+                    description: "Onze website maakt gebruik van strikt noodzakelijke technische cookies om de basisfunctionaliteit te waarborgen. We gebruiken momenteel geen analytische of marketing cookies. Mocht dit in de toekomst wijzigen, dan wordt deze privacyverklaring hierop aangepast en wordt uw toestemming gevraagd waar nodig."
+                }
+            ]
+        },
+        howWeUseData: {
+            title: "Hoe we uw gegevens gebruiken",
+            paragraphs: [
+                "Uw vragen beantwoorden en informatie over coaching bezorgen.",
+                "Inschrijvingen, bevestigingen en betalingen voor trainingen en coaching beheren.",
+                "De veiligheid en beschikbaarheid van onze website waarborgen en misbruik voorkomen.",
+                "Voldoen aan wettelijke verplichtingen, zoals boekhoudkundige en fiscale vereisten.",
+                "Met uw voorafgaande toestemming: nieuwsbrieven en marketingcommunicatie verzenden over onze diensten, trainingen en evenementen."
+            ]
+        },
+        legalBases: {
+            title: "Rechtsgronden voor verwerking",
+            items: [
+                "Noodzakelijk voor de uitvoering van een overeenkomst of om op uw verzoek stappen te ondernemen voordat een overeenkomst tot stand komt (voor vragen, boekingen en betalingen).",
+                "Wettelijke verplichtingen onder de Belgische wetgeving (bijvoorbeeld het bewaren van facturen en boekhoudkundige stukken).",
+                "Gerechtvaardigd belang om een veilige en betrouwbare website te exploiteren en onze diensten tegen misbruik te beschermen.",
+                "Toestemming waar nodig, bijvoorbeeld wanneer u vrijwillig informatie doorgeeft via het contactformulier."
+            ]
+        },
+        thirdParties: {
+            title: "Delen van persoonsgegevens",
+            intro: "We delen persoonsgegevens enkel met vertrouwde derden wanneer dat nodig is voor de hierboven beschreven doeleinden.",
+            items: [
+                "EmailJS PTE. LTD. (Singapore) bezorgt de berichten van het contactformulier aan onze mailbox. EmailJS treedt op als verwerker en bewaart de inhoud van de inzendingen zodat we u kunnen antwoorden.",
+                "Stripe Payments Europe, Limited (Ierland) verwerkt betalingen veilig en kan gegevens doorgeven aan Stripe, Inc. in de Verenigde Staten onder goedgekeurde waarborgen.",
+                "Vercel Inc. (Verenigde Staten) host onze website en bewaart serverlogs in de EU en de VS voor veiligheids- en performancedoeleinden.",
+                "Professionele adviseurs of overheidsinstanties wanneer dit nodig is om aan wettelijke verplichtingen te voldoen, overeenkomsten af te dwingen of juridische claims te verdedigen."
+            ]
+        },
+        retention: {
+            title: "Bewaartermijnen",
+            paragraphs: [
+                "Berichten die via het contactformulier binnenkomen bewaren we tot 24 maanden na het laatste contact, tenzij een langere bewaartermijn nodig is voor lopende ondersteuning of geschillen.",
+                "Transactiegegevens (inclusief facturen en betalingsbevestigingen) bewaren we gedurende 7 volledige boekjaren om aan Belgische boekhoud- en fiscale verplichtingen te voldoen.",
+                "Technische logbestanden van onze hostingprovider worden doorgaans tot 30 dagen bewaard, tenzij een langere termijn nodig is om veiligheidsincidenten te onderzoeken."
+            ]
+        },
+        security: {
+            title: "Beveiliging",
+            paragraphs: [
+                "We nemen technische en organisatorische maatregelen om uw persoonsgegevens te beschermen, waaronder HTTPS-encryptie, toegangsbeheer op basis van rollen en contractuele afspraken met onze dienstverleners.",
+                "Ondanks onze inspanningen kan geen enkel online systeem volledig veilig zijn. Verwittig ons onmiddellijk als u een vermoeden hebt van misbruik van uw gegevens."
+            ]
+        },
+        rights: {
+            title: "Uw rechten",
+            intro: "Onder de GDPR heeft u de volgende rechten. U kan ze op elk moment uitoefenen door contact met ons op te nemen via bovenstaande gegevens.",
+            list: [
+                "Inzage in de persoonsgegevens die we over u bewaren.",
+                "Correctie van onjuiste of onvolledige gegevens.",
+                "Verwijdering van uw gegevens wanneer er geen rechtsgrond voor verwerking meer bestaat.",
+                "Beperking van de verwerking in specifieke omstandigheden.",
+                "Overdracht van de gegevens die u aan ons hebt verstrekt (recht op gegevensoverdraagbaarheid).",
+                "Bezwaar tegen verwerking op basis van ons gerechtvaardigd belang.",
+                "Intrekking van toestemming wanneer de verwerking op uw toestemming is gebaseerd.",
+                "Een klacht indienen bij de Gegevensbeschermingsautoriteit als u van mening bent dat we uw persoonsgegevens niet correct verwerken."
+            ]
+        },
+        internationalTransfers: {
+            title: "Internationale doorgiften",
+            paragraphs: [
+                "Sommige van onze dienstverleners zijn gevestigd buiten de Europese Economische Ruimte. Wanneer persoonsgegevens internationaal worden doorgegeven vertrouwen we op passende waarborgen, zoals het EU-VS Data Privacy Framework of de standaardcontractbepalingen van de Europese Commissie, om uw gegevens te beschermen."
+            ]
+        },
+        complaints: {
+            title: "Vragen of klachten",
+            paragraphs: [
+                "Heeft u vragen of zorgen over de verwerking van uw persoonsgegevens? Contacteer ons dan eerst zodat we het probleem kunnen oplossen.",
+                "U heeft ook het recht om een klacht in te dienen bij de Gegevensbeschermingsautoriteit (Autorité de protection des données / Gegevensbeschermingsautoriteit), Drukpersstraat 35, 1000 Brussel, www.gegevensbeschermingsautoriteit.be."
+            ]
+        },
+        updates: {
+            title: "Wijzigingen",
+            paragraphs: [
+                "We kunnen deze privacyverklaring af en toe aanpassen om wijzigingen in onze verwerkingsactiviteiten of wettelijke vereisten te weerspiegelen. Het bijgewerkte document wordt op deze pagina gepubliceerd met een nieuwe revisiedatum."
+            ]
+        }
+    },
   
   // Contact section
   contact: {

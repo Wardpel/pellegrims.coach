@@ -22,6 +22,7 @@ export default function Footer({ locale, t }: Props) {
     }
   }
   const legalHref = `/${locale}/${t.footer.legalSlug}`
+  const privacyHref = `/${locale}/${t.footer.privacySlug}`
   return (
     <footer className="bg-gray-50 border-t border-gray-200 py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -86,12 +87,21 @@ export default function Footer({ locale, t }: Props) {
           <span className="block md:inline">
             {t.footer.copyright}
           </span>
-          <Link
-            href={legalHref}
-            className="block mt-2 md:mt-0 text-gray-600 hover:text-athletic-dark transition-colors"
-          >
-            {t.footer.legal}
-          </Link>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2 md:mt-0">
+            <Link
+              href={legalHref}
+              className="text-gray-600 hover:text-athletic-dark transition-colors"
+            >
+              {t.footer.legal}
+            </Link>
+            <span className="hidden md:inline text-gray-400">•</span>
+            <Link
+              href={privacyHref}
+              className="text-gray-600 hover:text-athletic-dark transition-colors"
+            >
+              {t.footer.privacy}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
