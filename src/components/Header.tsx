@@ -82,7 +82,29 @@ export default function Header({ locale, t }: Props) {
   }
 
   const otherLocale = locale === 'en' ? 'nl' : 'en'
-  const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`)
+
+  // Handle special paths with locale-specific slugs
+  const getOtherLocalePath = () => {
+    // Map of locale-specific slugs
+    const slugMappings: Record<string, Record<Locale, string>> = {
+      'general-terms': { en: 'general-terms', nl: 'algemene-voorwaarden' },
+      'algemene-voorwaarden': { en: 'general-terms', nl: 'algemene-voorwaarden' }
+    }
+
+    // Check if current path contains any special slug
+    for (const [key, mapping] of Object.entries(slugMappings)) {
+      if (pathname.includes(`/${key}`)) {
+        return pathname
+          .replace(`/${locale}`, `/${otherLocale}`)
+          .replace(`/${mapping[locale]}`, `/${mapping[otherLocale]}`)
+      }
+    }
+
+    // Default: simple locale replacement
+    return pathname.replace(`/${locale}`, `/${otherLocale}`)
+  }
+
+  const otherLocalePath = getOtherLocalePath()
   const homePath = `/${locale}/`
 
   const handleLanguageSwitch = () => {

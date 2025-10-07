@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { socialLinks } from '@/lib/constants'
 import { SocialLink } from '@/components/Header'
 import type { Locale } from '@/lib/i18n'
@@ -10,7 +11,7 @@ type Props = {
   t: TranslationKey
 }
 
-export default function Footer({ t }: Props) {
+export default function Footer({ locale, t }: Props) {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -20,6 +21,7 @@ export default function Footer({ t }: Props) {
       window.location.href = `/${locale}/#${sectionId}`
     }
   }
+  const legalHref = `/${locale}/${t.footer.legalSlug}`
   return (
     <footer className="bg-gray-50 border-t border-gray-200 py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -80,8 +82,18 @@ export default function Footer({ t }: Props) {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
-          {t.footer.copyright}
+        <div className="mt-8 pt-8 border-t border-gray-200 text-center md:text-left text-sm text-gray-500 md:flex md:items-center md:justify-between md:gap-6">
+          <span className="block md:inline">
+            {t.footer.copyright}
+          </span>
+          <Link
+            href={legalHref}
+            className="block mt-2 md:mt-0 text-gray-600 hover:text-athletic-dark transition-colors"
+          >
+            {t.footer.legal}
+          </Link>
         </div>
       </div>
-    </footer>)}
+    </footer>
+  )
+}

@@ -127,7 +127,155 @@ export const nl = {
     vatNumber: "BTW: BE0777482318",
     legalForm: "Commanditaire vennootschap",
     navigationTitle: "Navigatie",
-    followUs: "Volg Ons"
+    followUs: "Volg Ons",
+    legal: "Algemene Voorwaarden",
+    legalSlug: "algemene-voorwaarden"
+  },
+
+  // Pagina algemene voorwaarden
+  generalTerms: {
+    meta: {
+      title: 'Algemene Voorwaarden | Ward Pellegrims',
+      description: 'Juridische voorwaarden van Ward Pellegrims voor sportcoaching en zwem- en triatlontrajecten in België.'
+    },
+    title: 'Algemene Voorwaarden',
+    lastUpdated: 'Laatst bijgewerkt: 7 oktober 2025',
+    intro: 'Deze algemene voorwaarden (de "Voorwaarden") regelen elk aanbod, elke inschrijving en elke overeenkomst voor sportcoaching, zwemlessen, triatlontraining en aanverwante diensten die door Ward Pellegrims worden aangeboden. Door een dienst te boeken, online of via e-mail in te schrijven of een overeenkomst te ondertekenen, bevestig je dat je deze Voorwaarden hebt gelezen en aanvaard.',
+    sections: [
+      {
+        id: 'scope',
+        title: '1. Toepassingsgebied en partijen',
+        paragraphs: [
+          'De Voorwaarden zijn van toepassing op alle diensten die Ward Pellegrims CV aanbiedt, een commanditaire vennootschap naar Belgisch recht. Afwijkingen zijn enkel geldig indien ze uitdrukkelijk en schriftelijk werden overeengekomen.',
+          'In deze Voorwaarden verwijzen "wij", "we" of "ons" naar Ward Pellegrims CV en verwijst "je" of "jij" naar de natuurlijke persoon of rechtspersoon die onze diensten aankoopt of eraan deelneemt.'
+        ]
+      },
+      {
+        id: 'identification',
+        title: '2. Identificatie van de onderneming',
+        paragraphs: [
+          'Ward Pellegrims CV, Luiaardweg 21, 1850 Grimbergen, België.',
+          'BTW-nummer: BE 0777.482.318 (ingeschreven in de Kruispuntbank van Ondernemingen - KBO nummer 0777.482.318).',
+          'E-mail: info@pellegrims.coach'
+        ]
+      },
+      {
+        id: 'services',
+        title: '3. Diensten',
+        paragraphs: [
+          'Wij bieden individuele en groepstrajecten, sportkampen, clinics en advies aan voor zwemmen, triatlon en duursporten. De inhoud, duur en resultaten van elke dienst worden beschreven op onze website, in promotionele materialen of in een offerte op maat.',
+          'We behouden ons het recht voor om het programma van een traject aan te passen wanneer dat om didactische, veiligheids- of organisatorische redenen nodig is. Elke materiële wijziging wordt vóór de start meegedeeld.',
+          'Alle diensten, abonnementen en trajecten zijn strikt persoonlijk en niet-overdraagbaar. Ze kunnen niet worden verkocht, geruild of overgedragen aan derden zonder onze voorafgaande schriftelijke toestemming.'
+        ]
+      },
+      {
+        id: 'booking',
+        title: '4. Inschrijvingen en totstandkoming van de overeenkomst',
+        paragraphs: [
+          'Een inschrijving is definitief zodra je het online formulier voltooit, je deelname via e-mail bevestigt of een overeenkomst op maat ondertekent en wij een schriftelijke bevestiging verzenden. Bij overeenkomsten op afstand via de website of e-mail komt de overeenkomst tot stand zodra je onze bevestigingsmail ontvangt.',
+          'Je staat ervoor in dat alle verstrekte deelnemersgegevens correct zijn, inclusief medische informatie die relevant is voor een veilige deelname. Wij kunnen een inschrijving weigeren of annuleren wanneer essentiële informatie ontbreekt of onjuist is.'
+        ]
+      },
+      {
+        id: 'prices-payments',
+        title: '5. Prijzen, betalingen en facturatie',
+        paragraphs: [
+          'Alle prijzen worden in euro uitgedrukt en zijn inclusief Belgische btw, tenzij anders vermeld. Eventuele bijkomende kosten (zoals zwembadtoegang, verplaatsing of verblijf) worden duidelijk aangegeven in het aanbod.',
+          'Tenzij anders bepaald, zijn facturen betaalbaar binnen 30 dagen na factuurdatum. Bij laattijdige betaling zijn van rechtswege nalatigheidsintresten verschuldigd en rekenen we €15 administratiekosten per herinnering aan. We kunnen deelname schorsen tot de volledige betaling is ontvangen.'
+        ]
+      },
+      {
+        id: 'withdrawal',
+        title: '6. Herroepingsrecht en annulaties',
+        paragraphs: [
+          'Consumenten die op afstand boeken, beschikken over een wettelijk herroepingsrecht om binnen 14 kalenderdagen na bevestiging de overeenkomst zonder opgave van redenen te ontbinden. Je oefent dit recht uit door ons binnen die termijn via e-mail te informeren.',
+          'Het herroepingsrecht vervalt zodra de dienst volledig is uitgevoerd, of wanneer de cursus start met jouw voorafgaande uitdrukkelijke toestemming en erkenning dat je jouw herroepingsrecht verliest zodra de uitvoering begint.',
+          'Tenzij anders overeengekomen geldt buiten de wettelijke herroepingstermijn: annulaties meer dan 14 dagen voor de start zijn kosteloos; annulaties tussen 14 en 7 dagen voor de start brengen 50% van de totale prijs in rekening; bij annulaties binnen de zeven dagen of na de start is geen terugbetaling mogelijk.',
+          'Indien wij een activiteit annuleren of moeten uitstellen wegens omstandigheden binnen onze controle, bieden wij je de keuze tussen een alternatieve datum of een volledige terugbetaling van het betaalde bedrag. Indien wij moeten annuleren wegens overmacht (zoals extreme weersomstandigheden, pandemie, brand of andere onvoorziene gebeurtenissen buiten onze redelijke controle), bieden wij waar mogelijk een alternatieve datum aan. Wanneer geen alternatief kan worden geboden, ontvang je een terugbetaling of tegoed voor een latere dienst. Wij zijn niet aansprakelijk voor bijkomende kosten die je hebt gemaakt (bijvoorbeeld verplaatsing, verblijf of andere voorbereidingskosten) tenzij de annulatie veroorzaakt is door onze opzettelijke of zware fout.'
+        ]
+      },
+      {
+        id: 'participant-obligations',
+        title: '7. Verplichtingen van de deelnemer, gezondheid en veiligheid',
+        paragraphs: [
+          'Door in te schrijven voor onze diensten verklaar je dat je in goede gezondheid verkeert en fysiek en mentaal in staat bent om veilig deel te nemen aan de sportactiviteiten. Indien je twijfelt over je geschiktheid om deel te nemen, raadpleeg dan eerst een arts.',
+          'Je bent verplicht om ons vóór de start volledig en naar waarheid te informeren over alle relevante medische aandoeningen, blessures, allergieën, medicijngebruik of andere gezondheidskwesties die invloed kunnen hebben op je veilige deelname. Het verzwijgen van essentiële informatie kan leiden tot uitsluiting van deelname zonder terugbetaling.',
+          'Tijdens de activiteit ben je verplicht om onmiddellijk te melden wanneer je pijn, ongemak, duizeligheid of andere symptomen ervaart. Je blijft te allen tijde verantwoordelijk voor het correct inschatten van je eigen conditie en grenzen.',
+          'Je volgt alle veiligheidsinstructies van onze coaches of het personeel van de locatie op. We kunnen deelnemers die gevaarlijk of storend gedrag stellen uitsluiten zonder terugbetaling. Deelname aan alle activiteiten gebeurt op eigen risico.'
+        ]
+      },
+      {
+        id: 'liability',
+        title: '8. Aard van de dienstverlening, aansprakelijkheid en verzekeringen',
+        paragraphs: [
+          'Onze coaching- en trainingsdiensten vormen een inspanningsverbintenis, geen resultaatsverbintenis. Dit betekent dat wij ons inspannen om kwalitatieve begeleiding, advies en trainingen te leveren volgens de beste professionele standaarden, maar dat wij geen garantie geven op het behalen van specifieke sportieve resultaten, prestatieverbeteringen of andere uitkomsten. Sportieve vooruitgang hangt af van vele factoren buiten onze controle, waaronder jouw inzet, discipline, aanleg en fysieke conditie.',
+          'Wij zijn enkel aansprakelijk voor rechtstreekse schade die het gevolg is van onze opzettelijke of zware fout. Onze aansprakelijkheid is beperkt tot het bedrag van de overeengekomen dienst. Wij zijn niet aansprakelijk voor onrechtstreekse schade zoals gevolgschade, gederfde winst, verlies van kansen of immateriële schade.',
+          'Deelname aan sportactiviteiten houdt altijd een zeker risico in op blessures of andere lichamelijke klachten. Je blijft te allen tijde verantwoordelijk voor het inschatten van je eigen conditie en het afsluiten van een passende persoonlijke sportieve en/of gezondheidsverzekering. Wij beschikken over een beroepsaansprakelijkheidsverzekering conform de Belgische wetgeving.'
+        ]
+      },
+      {
+        id: 'intellectual-property',
+        title: '9. Intellectuele eigendom',
+        paragraphs: [
+          'Trainingsschema’s, cursusmateriaal, video’s en andere inhoud die wij bezorgen blijven onze intellectuele eigendom. Je ontvangt een niet-overdraagbare licentie voor persoonlijk gebruik. Het delen, reproduceren of commercieel gebruiken van dit materiaal zonder schriftelijke toestemming is verboden.'
+        ]
+      },
+      {
+        id: 'privacy',
+        title: '10. Persoonsgegevens',
+        paragraphs: [
+          'Wij verwerken persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG) en onze privacyverklaring. Gegevens die we bij inschrijving of coaching ontvangen, gebruiken wij uitsluitend voor klantenbeheer, dienstverlening en wettelijke verplichtingen.',
+          'Je kan je gegevens inkijken, laten verbeteren of verwijderen via info@pellegrims.coach. Klachten kan je indienen bij de Gegevensbeschermingsautoriteit (www.gegevensbeschermingsautoriteit.be).'
+        ]
+      },
+      {
+        id: 'image-rights',
+        title: "11. Beeldrechten en gebruik van foto's en video's",
+        paragraphs: [
+          "Tijdens trainingen, kampen en andere activiteiten kunnen wij foto's en video-opnames maken voor documentatie-, marketing- en promotiedoeleinden. Door deel te nemen aan onze diensten geef je toestemming voor het maken van dergelijke beelden waarop jij zichtbaar bent.",
+          'Wij kunnen deze beelden gebruiken op onze website, sociale media (zoals Instagram, Facebook en LinkedIn), in nieuwsbrieven, brochures en andere promotiematerialen. De beelden blijven onze eigendom en kunnen worden gebruikt zolang ze relevant zijn voor onze communicatie.',
+          'Je hebt te allen tijde het recht om deze toestemming in te trekken of bezwaar te maken tegen het gebruik van specifieke beelden waarop jij herkenbaar bent. Neem hiervoor contact op via info@pellegrims.coach. Wij zullen binnen redelijke termijn de betreffende beelden verwijderen, voor zover dit technisch mogelijk is. Eerder gepubliceerde of gedistribueerde materialen kunnen wij echter niet volledig uit alle kanalen verwijderen.',
+          'Wij respecteren jouw privacy en zullen beelden nooit gebruiken op een manier die jou in diskrediet kan brengen of je privacy op onevenredige wijze kan schenden.'
+        ]
+      },
+      {
+        id: 'confidentiality',
+        title: '12. Vertrouwelijkheid',
+        paragraphs: [
+          'Beide partijen verbinden zich ertoe om alle vertrouwelijke informatie die zij tijdens de samenwerking ontvangen geheim te houden. Vertrouwelijke informatie omvat onder meer persoonlijke trainingsdata, gezondheidsgegevens, prestaties, testresultaten, persoonlijke doelstellingen en andere niet-publieke informatie.',
+          'Wij zullen jouw trainingsgegevens en persoonlijke informatie niet delen met derden, behalve wanneer dit strikt noodzakelijk is voor de uitvoering van onze diensten (bijvoorbeeld met een gespecialiseerde trainer of fysiotherapeut), wanneer je hiervoor expliciete toestemming hebt gegeven, of wanneer wij hiertoe wettelijk verplicht zijn.',
+          'Ook jij verbindt je ertoe om onze bedrijfsmatige informatie, trainingsmethodieken en andere vertrouwelijke zaken die je tijdens de samenwerking leert kennen, niet zonder toestemming te delen of commercieel te gebruiken.',
+          'Deze vertrouwelijkheidsplicht blijft gelden na beëindiging van de overeenkomst.'
+        ]
+      },
+      {
+        id: 'complaints',
+        title: '13. Klachten en geschillenregeling',
+        paragraphs: [
+          'Meld klachten binnen zeven kalenderdagen na de betrokken dienst of nadat je het probleem hebt vastgesteld. We bevestigen ontvangst binnen vijf werkdagen en streven ernaar je klacht binnen 15 werkdagen inhoudelijk te beantwoorden.',
+          'Komen we niet tot een oplossing, dan kan je terecht bij de Consumentenombudsdienst (www.consumentenombudsdienst.be) of via het Europees ODR-platform (ec.europa.eu/odr).'
+        ]
+      },
+      {
+        id: 'law',
+        title: '14. Toepasselijk recht en bevoegde rechtbank',
+        paragraphs: [
+          'Deze Voorwaarden worden beheerst door het Belgische recht. Enkel de rechtbanken van het gerechtelijk arrondissement Brussel, Nederlandstalige afdeling, zijn bevoegd. Consumenten kunnen tevens naar de rechtbank van hun woonplaats stappen zoals voorzien door dwingend recht.',
+          'Indien een bepaling ongeldig of onafdwingbaar wordt verklaard, blijven de overige bepalingen volledig van kracht. We kunnen deze Voorwaarden van tijd tot tijd wijzigen; de versie op onze website geldt voor nieuwe inschrijvingen.'
+        ]
+      }
+    ],
+    contact: {
+      title: 'Vragen of klachten?',
+      description: 'Neem contact op met Ward Pellegrims voor bijkomende informatie of om je consumentenrechten uit te oefenen. We beantwoorden je bericht binnen twee werkdagen.',
+      emailLabel: 'E-mail',
+      emailValue: 'info@pellegrims.coach',
+      addressLabel: 'Maatschappelijke zetel',
+      addressValue: 'Luiaardweg 21, 1850 Grimbergen, België',
+      vatLabel: 'BTW-nummer',
+      vatValue: 'BE 0777.482.318',
+      complaintNote: 'Ben je niet tevreden met onze reactie, dan kan je terecht bij de Consumentenombudsdienst (www.consumentenombudsdienst.be) of een klacht indienen via het Europees ODR-platform (https://ec.europa.eu/odr).'
+    }
   },
   
   // Contact section
