@@ -2,29 +2,13 @@ import type { Metadata } from 'next'
 import { redirect, notFound } from 'next/navigation'
 import { getTranslations } from '@/lib/translations'
 import { isValidLocale, type Locale } from '@/lib/i18n'
-
-type LegalPageType = 'general-terms' | 'privacy-policy'
-
-const slugsConfig: Record<LegalPageType, Record<Locale, string>> = {
-  'general-terms': {
-    en: 'general-terms',
-    nl: 'algemene-voorwaarden'
-  },
-  'privacy-policy': {
-    en: 'privacy-policy',
-    nl: 'privacybeleid'
-  }
-}
-
-// Build reverse lookup: slug -> pageType
-const slugToPageType: Record<string, LegalPageType> = {}
-Object.entries(slugsConfig).forEach(([pageType, localeMap]) => {
-  Object.values(localeMap).forEach((slug) => {
-    slugToPageType[slug] = pageType as LegalPageType
-  })
-})
-
-const supportedSlugs = new Set(Object.keys(slugToPageType))
+import {
+  type LegalPageType,
+  getLegalSlug,
+  getLegalPageTypeBySlug,
+  legalSlugs,
+  supportedLegalSlugs
+} from '@/lib/legal'
 
 type Params = Promise<{ locale: string; termsSlug: string }>
 
@@ -34,7 +18,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const params: { locale: string; termsSlug: string }[] = []
-  Object.values(slugsConfig).forEach((localeMap) => {
+  Object.values(legalSlugs).forEach((localeMap) => {
     Object.entries(localeMap).forEach(([locale, termsSlug]) => {
       params.push({ locale, termsSlug })
     })
@@ -46,17 +30,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam, termsSlug } = await params
   const locale = isValidLocale(localeParam) ? localeParam : 'en'
 
-  if (!supportedSlugs.has(termsSlug)) {
+  if (!supportedLegalSlugs.has(termsSlug)) {
     return {}
   }
 
-  const pageType = slugToPageType[termsSlug]
+  const pageType = getLegalPageTypeBySlug(termsSlug) as LegalPageType
 
   const t = getTranslations(locale)
   const txt = pageType === 'general-terms' ? t.generalTerms : t.privacyPolicy
 
   const siteUrl = 'https://www.pellegrims.coach'
-  const pageSlug = slugsConfig[pageType][locale]
+  const pageSlug = getLegalSlug(pageType, locale)
   const pageUrl = `${siteUrl}/${locale}/${pageSlug}`
   const ogImageUrl = `${siteUrl}/images/banner_1920.jpg`
 
@@ -90,8 +74,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: pageUrl,
       languages: {
-        'en-US': `${siteUrl}/en/${slugsConfig[pageType].en}`,
-        'nl-BE': `${siteUrl}/nl/${slugsConfig[pageType].nl}`
+        'en-US': `${siteUrl}/en/${getLegalSlug(pageType, 'en')}`,
+        'nl-BE': `${siteUrl}/nl/${getLegalSlug(pageType, 'nl')}`
       }
     }
   }
@@ -101,12 +85,12 @@ export default async function LegalPage({ params }: Props) {
   const { locale: localeParam, termsSlug } = await params
   const locale: Locale = isValidLocale(localeParam) ? localeParam as Locale : 'en'
 
-  if (!supportedSlugs.has(termsSlug)) {
+  if (!supportedLegalSlugs.has(termsSlug)) {
     notFound()
   }
 
-  const pageType = slugToPageType[termsSlug]
-  const expectedSlug = slugsConfig[pageType][locale]
+  const pageType = getLegalPageTypeBySlug(termsSlug) as LegalPageType
+  const expectedSlug = getLegalSlug(pageType, locale)
 
   // Redirect if slug doesn't match the expected slug for this locale
   if (termsSlug !== expectedSlug) {
