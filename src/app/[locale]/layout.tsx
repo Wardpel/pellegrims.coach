@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { getTranslations, generateStaticParams } from "@/lib/translations";
-import { isValidLocale } from "@/lib/i18n";
+import { isValidLocale, type Locale } from "@/lib/i18n";
 
 export { generateStaticParams };
 
@@ -74,13 +76,22 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default async function LocaleLayout({ children }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   // Only load reCAPTCHA script if the site key is configured
   const isRecaptchaEnabled = !!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const { locale: localeParam } = await params;
+  const locale: Locale = isValidLocale(localeParam) ? (localeParam as Locale) : 'en';
+  const t = getTranslations(locale);
 
   return (
     <>
-      {children}
+      <div className="min-h-screen bg-white">
+        <Header locale={locale} t={t} />
+        <main>
+          {children}
+        </main>
+        <Footer locale={locale} t={t} />
+      </div>
       {isRecaptchaEnabled && (
         <Script 
           src="https://www.google.com/recaptcha/api.js"

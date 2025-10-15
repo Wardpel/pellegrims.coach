@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { AthleticButton } from '@/components/ui/athletic-button'
+import { ArrowRightIcon } from '@/components/icons'
 import { StatCard } from '@/components/ui/stat-card'
 import { getYearsOfExperienceString, getExperienceText } from '@/lib/experience'
 import { ATHLETE_COUNTS } from '@/lib/constants'
@@ -68,6 +69,30 @@ export default function About({ locale, t }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            {/* Lightweight inline promo above hero text - pill style */}
+            <motion.div
+              initial={{ opacity: 0, y: -6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.35 }}
+              className="mb-6 flex justify-center"
+            >
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/20 backdrop-blur-sm px-3.5 py-2 text-sm md:text-base text-white">
+                <span className="font-display font-semibold">
+                  {locale === 'en'
+                    ? 'Winter 2025–2026 group training'
+                    : 'Groepstraining winter 2025–2026'}
+                </span>
+                <a href={`/${locale}/zwemtraining/winter-2025-2026`}>
+                  <AthleticButton
+                    size="md"
+                    className="!rounded-full !py-2 !px-4 font-semibold"
+                  >
+                    {locale === 'en' ? 'Learn more' : 'Meer info'}
+                    <ArrowRightIcon size={16} className="ml-1" />
+                  </AthleticButton>
+                </a>
+              </div>
+            </motion.div>
             <motion.p 
               className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white mb-6 leading-tight"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -106,6 +131,9 @@ export default function About({ locale, t }: Props) {
                 {t.about.getInTouch}
               </AthleticButton>
             </motion.div>
+
+            {/* Inline Hero Promo CTA for Winter 2025–2026 */}
+            
           </motion.div>
         </div>
 

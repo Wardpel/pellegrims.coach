@@ -2,23 +2,16 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { TwitterIcon, FacebookIcon, InstagramIcon, LinkedinIcon, EnvelopeIcon, BarsIcon, TimesIcon, GlobeIcon } from '@/components/icons'
+import { EnvelopeIcon, BarsIcon, TimesIcon, GlobeIcon } from '@/components/icons'
 import { GlassHeader } from '@/components/ui/glass-header'
+import { socialLinks } from '@/lib/constants'
 import type { Locale } from '@/lib/i18n'
 import type { TranslationKey } from '@/lib/translations'
 
-// Social media links configuration
-const socialLinks = [
-  { href: "https://twitter.com/WardPel", icon: TwitterIcon, platform: "Twitter" },
-  { href: "https://www.facebook.com/ward.pellegrims/", icon: FacebookIcon, platform: "Facebook" },
-  { href: "https://www.instagram.com/wardpel/", icon: InstagramIcon, platform: "Instagram" },
-  { href: "https://www.linkedin.com/in/pellegrimsward/", icon: LinkedinIcon, platform: "LinkedIn" }
-] as const
-
-// Reusable social link component
-const SocialLink = ({
+export const SocialLink = ({
   href,
   icon: Icon,
   platform,
@@ -74,17 +67,45 @@ type Props = {
 export default function Header({ locale, t }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setIsMenuOpen(false)
+      return
     }
+    // Fallback: navigate to the homepage anchor if section is not on this page
+    const homeAnchor = `/${locale}/#${sectionId}`
+    window.location.assign(homeAnchor)
   }
 
   const otherLocale = locale === 'en' ? 'nl' : 'en'
-  const otherLocalePath = locale === 'en' ? '/nl/' : '/en/'
+
+  // Handle special paths with locale-specific slugs
+  const getOtherLocalePath = () => {
+    // Map of locale-specific slugs
+    const slugMappings: Record<string, Record<Locale, string>> = {
+      'general-terms': { en: 'general-terms', nl: 'algemene-voorwaarden' },
+      'algemene-voorwaarden': { en: 'general-terms', nl: 'algemene-voorwaarden' }
+    }
+
+    // Check if current path contains any special slug
+    for (const [key, mapping] of Object.entries(slugMappings)) {
+      if (pathname.includes(`/${key}`)) {
+        return pathname
+          .replace(`/${locale}`, `/${otherLocale}`)
+          .replace(`/${mapping[locale]}`, `/${mapping[otherLocale]}`)
+      }
+    }
+
+    // Default: simple locale replacement
+    return pathname.replace(`/${locale}`, `/${otherLocale}`)
+  }
+
+  const otherLocalePath = getOtherLocalePath()
+  const homePath = `/${locale}/`
 
   const handleLanguageSwitch = () => {
     // Mark that user has manually chosen a language
@@ -112,15 +133,18 @@ export default function Header({ locale, t }: Props) {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="h-12 w-auto">
-                <Image
-                  src="/images/WPC_Logo_Horizontal_FullColour.png"
-                  alt="Ward Pellegrims Coaching"
-                  width={240}
-                  height={96}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
+              <Link href={homePath} aria-label="Ward Pellegrims Coaching homepage">
+                <div className="h-12 w-auto">
+                  <Image
+                    src="/images/WPC_Logo_Horizontal_FullColour.png"
+                    alt="Ward Pellegrims Coaching"
+                    width={240}
+                    height={96}
+                    className="h-full w-auto object-contain"
+                    priority
+                  />
+                </div>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}
