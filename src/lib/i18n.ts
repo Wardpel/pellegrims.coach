@@ -25,3 +25,17 @@ export function removeLocaleFromPath(pathname: string): string {
   }
   return pathname
 }
+
+export function detectPreferredLocale(acceptLanguage: string | null | undefined): Locale {
+  if (!acceptLanguage) {
+    return defaultLocale
+  }
+
+  const normalized = acceptLanguage.toLowerCase()
+
+  if (normalized.includes('nl')) {
+    return 'nl'
+  }
+
+  return defaultLocale
+}
