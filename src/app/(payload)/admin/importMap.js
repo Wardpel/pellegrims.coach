@@ -10,6 +10,7 @@ import { PayloadIcon as PayloadIcon_cbadded3f3be6fa287eeb5a6c06bb668 } from '@/c
 import { PayloadLogo as PayloadLogo_cbadded3f3be6fa287eeb5a6c06bb668 } from '@/components/PayloadBranding'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
+/** @type import('payload').ImportMap */
 export const importMap = {
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalField": RscEntryLexicalField_44fe37237e0ebf4470c9990d8cb7b07e,
