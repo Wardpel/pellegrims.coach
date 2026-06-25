@@ -1,0 +1,121 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Brussels"
+    open-pull-requests-limit: 6
+    versioning-strategy: "increase-if-necessary"
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
+    cooldown:
+      default-days: 5
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    groups:
+      security-patches:
+        applies-to: security-updates
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
+      payload-cms:
+        patterns:
+          - "payload"
+          - "@payloadcms/*"
+        update-types:
+          - "patch"
+          - "minor"
+      next-react:
+        patterns:
+          - "next"
+          - "@next/*"
+          - "eslint-config-next"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+        update-types:
+          - "patch"
+          - "minor"
+      vercel-observability:
+        patterns:
+          - "@vercel/*"
+        update-types:
+          - "patch"
+          - "minor"
+      app-runtime:
+        dependency-type: "production"
+        update-types:
+          - "patch"
+          - "minor"
+        exclude-patterns:
+          - "payload"
+          - "@payloadcms/*"
+          - "next"
+          - "@next/*"
+          - "react"
+          - "react-dom"
+          - "@vercel/*"
+      test-tooling:
+        patterns:
+          - "@playwright/test"
+          - "playwright"
+        update-types:
+          - "patch"
+          - "minor"
+      style-tooling:
+        patterns:
+          - "tailwindcss"
+          - "tailwind-merge"
+          - "postcss"
+          - "autoprefixer"
+          - "prettier-plugin-tailwindcss"
+        update-types:
+          - "patch"
+          - "minor"
+      dev-tooling:
+        dependency-type: "development"
+        update-types:
+          - "patch"
+          - "minor"
+        exclude-patterns:
+          - "@playwright/test"
+          - "playwright"
+          - "tailwindcss"
+          - "postcss"
+          - "autoprefixer"
+          - "prettier-plugin-tailwindcss"
+          - "@next/*"
+          - "eslint-config-next"
+          - "@types/react"
+          - "@types/react-dom"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "06:30"
+      timezone: "Europe/Brussels"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
