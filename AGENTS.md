@@ -96,7 +96,13 @@ Minimum expectations:
 - for formatting-sensitive edits: `npm run format:check`
 - for user-flow or admin-impacting edits: relevant Playwright tests
 
-### 4) Schema Changes Require Extra Care
+### 4) Keep npm Lockfiles CI-Installable
+
+- Generate and update `package-lock.json` with standard npm peer-dependency resolution. Do not use `--legacy-peer-deps` when creating or repairing the lockfile.
+- After dependency changes, run `npm ci` from a clean install and confirm it succeeds before running lint or tests. `npm ci --dry-run` is a useful lockfile consistency check, but does not replace a real install.
+- If a local `node_modules` directory causes peer-resolution conflicts, remove the local install or use `npm install --package-lock-only` with standard resolution; do not commit a lockfile produced by bypassing peer dependencies.
+
+### 5) Schema Changes Require Extra Care
 
 If you change anything in `src/collections` or other Payload schema/config:
 
@@ -105,7 +111,7 @@ If you change anything in `src/collections` or other Payload schema/config:
 - verify migration safety (no destructive behavior unless explicitly requested)
 - mention migration implications in your final summary
 
-### 5) E2E Expectations
+### 6) E2E Expectations
 
 - E2E tests run against a dedicated production build on port `3005`.
 - Keep tests deterministic and isolated.
