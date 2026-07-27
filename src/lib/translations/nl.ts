@@ -150,6 +150,13 @@ export const nl = {
     },
   },
 
+  // Homepage partner section
+  partners: {
+    title: "Onze Partners",
+    description: "Vertrouwde merken die de weg van elke atleet ondersteunen.",
+    visitLabel: "Bezoek partner",
+  },
+
   // Footer section
   footer: {
     copyright: "© Ward Pellegrims. Alle rechten voorbehouden.",
