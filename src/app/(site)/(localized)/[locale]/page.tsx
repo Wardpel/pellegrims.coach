@@ -4,6 +4,7 @@ import CtaSection from "@/components/sections/cta-section";
 import Groups from "@/components/sections/groups";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
+import Partners from "@/components/sections/partners";
 import StructuredData from "@/components/layout/structured-data";
 import { getTranslations } from "@/lib/translations";
 import { isValidLocale, type Locale } from "@/lib/i18n";
@@ -46,6 +47,7 @@ export default async function Home({ params }: Props) {
       <Groups locale={locale} t={t} groupTrainings={cmsGroupTrainings} />
       <Projects t={t} cmsProjects={cmsProjects} />
       <Contact locale={locale} t={t} />
+      <Partners t={t} />
     </>
   );
 }

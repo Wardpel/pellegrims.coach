@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        fjalla: ["var(--font-fjalla-one)", "sans-serif"],
+        brand: ["var(--font-montserrat)", "sans-serif"],
       },
       colors: {
         // Semantic color tokens referencing CSS variables

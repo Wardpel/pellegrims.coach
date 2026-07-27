@@ -1,5 +1,5 @@
 import "../../../../globals.css";
-import { inter, poppins } from "@/lib/fonts";
+import { fjallaOne, inter, montserrat, poppins } from "@/lib/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -94,7 +94,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${poppins.variable} ${fjallaOne.variable} ${montserrat.variable} antialiased`}
+      >
         <div className="flex min-h-screen flex-col bg-white">
           <Header locale={locale} t={t} />
           <main className="flex flex-grow flex-col">{children}</main>

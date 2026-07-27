@@ -152,6 +152,13 @@ export const en = {
     },
   },
 
+  // Homepage partner section
+  partners: {
+    title: "Our Partners",
+    description: "Trusted brands that support the journey of every athlete.",
+    visitLabel: "Visit partner",
+  },
+
   // Footer section
   footer: {
     copyright: "© Ward Pellegrims. All rights reserved.",
