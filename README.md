@@ -112,6 +112,7 @@ npm run format              # prettier --write .
 npm run format:check        # prettier --check .
 
 npm run test:e2e            # playwright test
+npm run test:e2e:coverage   # Playwright tests with Cobertura coverage output
 npm run test:e2e:headed     # playwright test --headed
 npm run test:e2e:ui         # playwright test --ui
 
